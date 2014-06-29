@@ -1,0 +1,47 @@
+{
+  "name": "gulp-sprite-glue",
+  "version": "0.0.1",
+  "description": "Gulp Glue Plugin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/frontainer/gulp-sprite-glue"
+  },
+  "author": "frontainer <frontainer@gmail.com> (http://frontainer.com)",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "glue",
+    "python",
+    "sprite",
+    "spritesheet",
+    "img",
+    "image",
+    "png",
+    "gif",
+    "css",
+    "scss",
+    "json",
+    "caat"
+  ],
+  "dependencies": {
+    "gulp-util": "^2.2.0",
+    "through2": "^0.5.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.5"
+  },
+  "bugs": {
+    "url": "https://github.com/frontainer/gulp-sprite-glue/issues"
+  },
+  "homepage": "https://github.com/frontainer/gulp-sprite-glue",
+  "main": "index.js"
+}
