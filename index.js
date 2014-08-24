@@ -97,15 +97,17 @@ function glue(dest,options) {
 
     var commandOptions = [];
 
-    if (options.cmd) {
-        //cmdオプションがある場合はそのまま流し込み
-        commandOptions.push(options.cmd);
-    } else {
-        //プロパティ見てオプションコマンドの追加
-        for (var key in options) {
-            var v = parseOption(key,options[key]);
-            if (v) {
-                commandOptions.push(v);
+    if (options) {
+        if (options.cmd) {
+            //cmdオプションがある場合はそのまま流し込み
+            commandOptions.push(options.cmd);
+        } else {
+            //プロパティ見てオプションコマンドの追加
+            for (var key in options) {
+                var v = parseOption(key, options[key]);
+                if (v) {
+                    commandOptions.push(v);
+                }
             }
         }
     }
