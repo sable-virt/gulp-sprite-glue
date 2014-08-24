@@ -7,25 +7,25 @@ var exec = require('child_process').exec;
 var COMMANDS = {
     algorithm: '--algorithm=%val%',
     crop: '--crop',
-    caat: '--caat',
+    caat: '--caat%val%',
     cachebuster: '--cachebuster',
     cachebusterFilename: '--cachebuster-filename',
     cachebusterFilenameOnlySprites: '--cachebuster-filename-only-sprites',
-    cocos2d: '--cocos2d',
+    cocos2d: '--cocos2d%val%',
     css: '--css=%val%',
     img: '--img=%val%',
     cssTemplate: '--css-template=%val%',
     force: '--force',
     followLinks: '--follow-links',
-    html: '--html',
-    json: '--json',
+    html: '--html%val%',
+    json: '--json%val%',
     jsonFormat: '--json-format=%val%',
-    less: '--less',
-    lessTemplate: '--less-template',
-    margin: '--margin',
+    less: '--less%val%',
+    lessTemplate: '--less-template=%val%',
+    margin: '--margin=%val%',
     namespace: '--namespace=%val%',
     noImg: '--no-img',
-    noCss: 'no-css',
+    noCss: '--no-css',
     ordering: '--ordering=%val%',
     padding: '--padding=%val%',
     png8: '--png8',
@@ -37,7 +37,7 @@ var COMMANDS = {
     retina: '--retina',
     source: '--source=%val%',
     output: '--output=%val%',
-    scss: '--scss',
+    scss: '--scss%val%',
     scssTemplate: '--scss-template=%val%',
     separator: '--separator=%val%',
     spriteNamespace: '--sprite-namespace=%val%',
@@ -148,6 +148,9 @@ function parseOption(key,value) {
     }
     if (!value || value === false) {
         return;
+    }
+    if (/^(caat|html|json|less|scss|cocos2d)$/.test(key)) {
+        value = value === true ? '' : '=' + value;
     }
     return val.replace('%val%',value);
 }
