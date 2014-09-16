@@ -119,8 +119,8 @@ function glue(dest,options) {
         }
         if (file.isDirectory()) {
             var command = ['glue'];
-            command.push(file.path);
-            command.push(dest);
+            command.push('"'+file.path+'"');
+            command.push('"'+dest+'"');
             command = command.concat(commandOptions);
 
             console.log('Execute: ' + command.join(' '));
