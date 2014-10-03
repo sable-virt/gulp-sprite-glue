@@ -27,6 +27,20 @@ gulp.src("./src/*")
 	//gule("dest path",options);
 ```
 
+or
+
+```
+var glue = require("gulp-sprite-glue");
+
+gulp.src("./src/*")
+	.pipe(glue({
+	    css: '/path/to/css_dest',
+	    img: '/path/to/img_dest'
+	}));
+	//gule(options);
+	//Both css and img options required.
+```
+
 ## API
 
 ### gulp-sprite-glue(options)
