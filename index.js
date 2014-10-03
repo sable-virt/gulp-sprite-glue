@@ -44,48 +44,6 @@ var COMMANDS = {
     url: '--url=%val%',
     watch: '--watch'
 };
-// デフォルトオプション
-var DEFAULT_OPTIONS = {
-    algorithm: null,//square|vertical|hortizontal|diagonal|vertical-right|horizontal-bottom
-    crop: false,
-    caat: false,
-    cachebuster: false,
-    cachebusterFilename: null,
-    cachebusterFilenameOnlySprites: false,
-    cocos2d: false,
-    css: null,
-    img: null,
-    cssTemplate: null,
-    force: false,
-    followLinks: false,
-    html: false,
-    json: false,
-    jsonFormat: null,
-    less: false,
-    lessTemplate: null,
-    margin: null,
-    namespace: null,
-    noImg: false,
-    noCss: false,
-    ordering: null,
-    padding: null,
-    png8: false,
-    project: false,
-    pseudoClassSeparator: null,
-    quiet: false,
-    recursive: false,
-    ratios: null,
-    retina: false,
-    source: null,
-    output: null,
-    scss: false,
-    scssTemplate: null,
-    separator: null,
-    spriteNamespace: null,
-    url: null,
-    watch: false
-};
-
 
 /**
  * プラグイン関数
