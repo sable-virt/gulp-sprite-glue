@@ -24,7 +24,7 @@ gulp.src("./src/*")
 	.pipe(glue("/path/to/sprites",{
 		// options
 	}));
-	//gule("dest path",options);
+	//glue("dest path",options);
 ```
 
 or
@@ -37,7 +37,7 @@ gulp.src("./src/*")
 	    css: '/path/to/css_dest',
 	    img: '/path/to/img_dest'
 	}));
-	//gule(options);
+	//glue(options);
 	//Both css and img options required.
 ```
 
