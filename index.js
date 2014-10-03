@@ -89,11 +89,17 @@ var DEFAULT_OPTIONS = {
 
 /**
  * プラグイン関数
+ * @param dest
  * @param options
  * @returns {*}
  */
 function glue(dest,options) {
     // 入力ファイルを受け取って処理するstreamオブジェクトを生成
+
+    if (typeof dest === 'object') {
+        options = dest;
+        dest = null;
+    }
 
     var commandOptions = [];
 
@@ -113,14 +119,16 @@ function glue(dest,options) {
     }
 
     var stream = through.obj(function (file, enc, callback) {
-        if (!dest) {
-            this.emit('error', new gutil.PluginError('gulp-sprite-glue', 'required dest path.'));
+        if (!dest && (!options.img && !options.css)) {
+            this.emit('error', new gutil.PluginError('gulp-sprite-glue', 'Required dest path or both options.img and options.css'));
             callback();
         }
         if (file.isDirectory()) {
             var command = ['glue'];
             command.push('"'+file.path+'"');
-            command.push('"'+dest+'"');
+            if (dest) {
+                command.push('"'+dest+'"');
+            }
             command = command.concat(commandOptions);
 
             console.log('Execute: ' + command.join(' '));
@@ -145,7 +153,7 @@ function glue(dest,options) {
 function parseOption(key,value) {
     var val = COMMANDS[key];
     if (!val) {
-        grunt.log.warn('Not found command ' + key + '(' + value + ')');
+        gutil.log('Not found command ' + key + '(' + value + ')');
         return;
     }
     if (!value || value === false) {
