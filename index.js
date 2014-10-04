@@ -89,7 +89,7 @@ function glue(dest,options) {
             }
             command = command.concat(commandOptions);
 
-            console.log('Execute: ' + command.join(' '));
+            gutil.log('Execute: ' + command.join(' '));
             exec(command.join(' '), function (err, stdout, stderr) {
                 console.log(stdout);
                 callback();
