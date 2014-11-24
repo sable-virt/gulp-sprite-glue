@@ -114,7 +114,7 @@ function parseOption(key,value) {
         gutil.log('Not found command ' + key + '(' + value + ')');
         return;
     }
-    if (!value || value === false) {
+    if (value === false) {
         return;
     }
     if (/^(caat|html|json|less|scss|cocos2d)$/.test(key)) {
