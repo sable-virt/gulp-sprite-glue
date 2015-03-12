@@ -59,7 +59,8 @@ function glue(dest,options) {
         dest = null;
     }
 
-    var commandOptions = [];
+    var commandOptions = [],
+        quiet = false;
 
     if (options) {
         if (options.cmd) {
@@ -68,6 +69,9 @@ function glue(dest,options) {
         } else {
             //プロパティ見てオプションコマンドの追加
             for (var key in options) {
+                if (key === 'quiet' && options[key]) {
+                    quiet = true;
+                }
                 var v = parseOption(key, options[key]);
                 if (v) {
                     commandOptions.push(v);
@@ -89,9 +93,13 @@ function glue(dest,options) {
             }
             command = command.concat(commandOptions);
 
-            gutil.log('Execute: ' + command.join(' '));
+            if (!quiet) {
+                gutil.log('Execute: ' + command.join(' '));
+            }
             exec(command.join(' '), function (err, stdout, stderr) {
-                console.log(stdout);
+                if (!quiet) {
+                    console.log(stdout);
+                }
                 callback();
             });
             this.push(file);
