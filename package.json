@@ -1,6 +1,6 @@
 {
   "name": "gulp-sprite-glue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gulp Glue Plugin",
   "license": "MIT",
   "repository": {
@@ -12,7 +12,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": ""
+    "test": "./node_modules/.bin/mocha --timeout 10000 --require intelli-espower-loader ./test/index.js"
   },
   "files": [
     "index.js"
@@ -37,7 +37,11 @@
     "through2": "^0.5.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.5"
+    "espower-loader": "^0.10.0",
+    "gulp": "^3.8.5",
+    "intelli-espower-loader": "^0.6.0",
+    "mocha": "^2.2.1",
+    "power-assert": "^0.10.2"
   },
   "bugs": {
     "url": "https://github.com/frontainer/gulp-sprite-glue/issues"
