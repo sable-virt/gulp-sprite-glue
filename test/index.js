@@ -48,9 +48,9 @@ describe('gulp-sprite-glue', function() {
     beforeEach(function() {
 
     });
-    it('createOption - use cmd option', function() {
+    it('createCommandList - use cmd option', function() {
         assert.deepEqual(
-            generator.createOption({
+            generator.createCommandList({
                 cmd: 'glue icons sprites',
                 dummy: 'test'
             }),
@@ -58,13 +58,13 @@ describe('gulp-sprite-glue', function() {
         );
     });
 
-    it('createOption - default', function() {
-        assert.deepEqual(generator.createOption({}), []);
+    it('createCommandList - default', function() {
+        assert.deepEqual(generator.createCommandList({}), []);
     });
 
-    it('createOption', function() {
+    it('createCommandList', function() {
         assert.deepEqual(
-            generator.createOption({
+            generator.createCommandList({
                 algorithm: 'square',
                 crop: true,
                 caat: true,
