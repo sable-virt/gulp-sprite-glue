@@ -273,6 +273,12 @@ Default value: `false`
 
 While you are developing a site it could be quite frustrating running Glue.
 
+## Test
+
+```shell
+npm test
+```
+
 ## License
 MIT
 
