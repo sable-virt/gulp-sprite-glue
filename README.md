@@ -1,5 +1,8 @@
 # gulp-sprite-glue
-> gulp-sprite-glue plugin for [gulp](https://github.com/wearefractal/gulp)
+[![Build Status](https://travis-ci.org/frontainer/gulp-sprite-glue.svg?branch=feature%2Fv0.0.4)](https://travis-ci.org/frontainer/gulp-sprite-glue)
+[![npm version](https://badge.fury.io/js/gulp-sprite-glue.svg)](http://badge.fury.io/js/gulp-sprite-glue)
+
+gulp-sprite-glue plugin for [gulp](https://github.com/wearefractal/gulp)
 
 ## Required
 This plugin requires
