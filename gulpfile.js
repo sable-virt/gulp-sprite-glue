@@ -6,7 +6,7 @@ var gulp = require('gulp');
  */
 gulp.task('default', function () {
     gulp.src('./test/images')
-        .pipe(glue('./test'));
+        .pipe(glue('./test',{quiet:true}));
 });
 
 gulp.task('separate', function () {

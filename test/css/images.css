@@ -1,0 +1,53 @@
+﻿/* glue: 0.9.4 hash: 0bff4aa64c */
+        .sprite-images-align-center-2x,
+.sprite-images-action-undo-2x,
+.sprite-images-action-redo-2x,
+.sprite-images-account-logout-2x,
+.sprite-images-account-login-2x {
+            background-image: url('../sprite/images.png');
+            background-repeat: no-repeat;
+        }
+        
+        .sprite-images-align-center-2x {
+            background-position: 0 0;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .sprite-images-action-undo-2x {
+            background-position: -16px 0;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .sprite-images-action-redo-2x {
+            background-position: 0 -16px;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .sprite-images-account-logout-2x {
+            background-position: -16px -16px;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .sprite-images-account-login-2x {
+            background-position: -32px 0;
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {
+            .sprite-images-align-center-2x,
+    .sprite-images-action-undo-2x,
+    .sprite-images-action-redo-2x,
+    .sprite-images-account-logout-2x,
+    .sprite-images-account-login-2x {
+                background-image: url('../sprite/images.png');
+                -webkit-background-size: 48px 32px;
+                -moz-background-size: 48px 32px;
+                background-size: 48px 32px;
+            }
+        }
+        

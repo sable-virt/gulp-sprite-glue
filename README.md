@@ -1,5 +1,8 @@
 # gulp-sprite-glue
-> gulp-sprite-glue plugin for [gulp](https://github.com/wearefractal/gulp)
+[![Build Status](https://travis-ci.org/frontainer/gulp-sprite-glue.svg)](https://travis-ci.org/frontainer/gulp-sprite-glue)
+[![npm version](https://badge.fury.io/js/gulp-sprite-glue.svg)](http://badge.fury.io/js/gulp-sprite-glue)
+
+gulp-sprite-glue plugin for [gulp](https://github.com/wearefractal/gulp)
 
 ## Required
 This plugin requires
@@ -272,6 +275,12 @@ Type: `Boolean`
 Default value: `false`
 
 While you are developing a site it could be quite frustrating running Glue.
+
+## Test
+
+```shell
+npm test
+```
 
 ## License
 MIT
