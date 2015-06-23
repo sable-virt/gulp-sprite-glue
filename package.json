@@ -33,14 +33,14 @@
     "caat"
   ],
   "dependencies": {
-    "gulp-util": "^3.0.4",
-    "through2": "^0.6.5"
+    "gulp-util": "^3.0.6",
+    "through2": "^2.0.0"
   },
   "devDependencies": {
-    "espower-loader": "^0.10.0",
-    "gulp": "^3.8.11",
-    "intelli-espower-loader": "^0.6.0",
-    "mocha": "^2.2.4",
+    "espower-loader": "^0.11.0",
+    "gulp": "^3.9.0",
+    "intelli-espower-loader": "^0.7.0",
+    "mocha": "^2.2.5",
     "power-assert": "^0.11.0"
   },
   "bugs": {
